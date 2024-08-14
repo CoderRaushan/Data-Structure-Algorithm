@@ -1,41 +1,36 @@
-#include<iostream>
+#include <iostream>
 #include <vector>
+#include <algorithm>
 using namespace std;
 
-void rotateleft(int i, int j, vector<int>& nums)
-{
-    while(i < j)
-    {
-        int temp = nums[i];
-        nums[i] = nums[j];
-        nums[j] = temp;
-        i++;
-        j--;
+// Function to reverse elements from index l to index r in the array
+void rotateLeft(int l, int r, vector<int>& arr) {
+    while (l < r) {
+        swap(arr[l], arr[r]);
+        l++;
+        r--;
     }
 }
 
-void rotate(vector<int>& nums, int k)
+// Function to left rotate array elements by d positions using the three-step approach
+void leftRotate(vector<int>& arr, int k) 
 {
-    int n = nums.size();
-    if (k > n)
-    {
-        k = k % n;
-    }
-    rotateleft(n - k, n - 1, nums); // Rotate the last k elements
-    rotateleft(0, n - k - 1, nums); // Rotate the first n-k elements
-    rotateleft(0, n - 1, nums);     // Rotate the entire array
+    int n = arr.size();
+    k = k % n; 
+    rotateLeft(0, n - 1 - k, arr);
+    rotateLeft(n - k , n - 1, arr);
+    rotateLeft(0, n - 1, arr);
 }
-void display(vector<int>nums)
+
+int main() 
 {
-    for(auto it:nums)
-    {
-        cout<<it<<" ";
+    vector<int> arr = {1, 2, 3, 4, 5};
+    int d = 2;
+    leftRotate(arr, d);
+    cout << "Array after left rotation:" << endl;
+    for (int i = 0; i < arr.size(); i++) {
+        cout << arr[i] << " ";
     }
-}
-int main()
-{
-    vector<int>nums={1,2,3,4,5};
-    rotate(nums,3);
-    display(nums);
+    cout << endl;
     return 0;
 }

@@ -37,9 +37,9 @@ void reversepart(int i, int j, vector<int> &v)
          {
             k=k%n;
          }
-        reversepart(0, n - 1 - k, v1); // int n=v.size()-1-k;
-        reversepart(n - k, n - 1, v1);
-        reversepart(0, n - 1, v1);
+        reversepart(0, n - 1 - k, v1); //left part first
+        reversepart(n - k, n - 1, v1);// right part second
+        reversepart(0, n - 1, v1);// all array ko swap kro
         display(v1);
         return 0;
     }
