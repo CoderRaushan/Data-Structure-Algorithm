@@ -31,7 +31,7 @@ void reversepart(int i, int j, vector<int> &v)
         v1.push_back(4);
         v1.push_back(8);
         display(v1);
-        int k = 7;
+        int k = 3;
         int n = v1.size();
          if(k>n)
          {
