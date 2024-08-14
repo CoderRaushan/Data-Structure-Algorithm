@@ -11,8 +11,6 @@ void rotateLeft(int l, int r, vector<int>& arr) {
         r--;
     }
 }
-
-// Function to left rotate array elements by d positions using the three-step approach
 void leftRotate(vector<int>& arr, int k) 
 {
     int n = arr.size();
@@ -22,15 +20,18 @@ void leftRotate(vector<int>& arr, int k)
     rotateLeft(0, n - 1, arr);
 }
 
+void display(vector<int>arr)
+{
+  for(auto it:arr)
+  {
+    cout<<it<<" ";
+  }
+}
 int main() 
 {
     vector<int> arr = {1, 2, 3, 4, 5};
     int d = 2;
     leftRotate(arr, d);
-    cout << "Array after left rotation:" << endl;
-    for (int i = 0; i < arr.size(); i++) {
-        cout << arr[i] << " ";
-    }
-    cout << endl;
+    display(arr);
     return 0;
 }
