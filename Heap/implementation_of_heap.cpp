@@ -2,8 +2,8 @@
 using namespace std;
 class MeanHeap
 {
-
-    int[] arr;
+    public:
+    int  *arr;
     int size;
     int capacity;
 
@@ -29,6 +29,9 @@ class MeanHeap
 
 int main()
 {
-
+    MeanHeap heap(10);
+    cout<<heap.parent(8)<<endl;
+    cout<<heap.left(8)<<endl;
+    cout<<heap.right(8)<<endl;  
     return 0;
 }
