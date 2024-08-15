@@ -5,13 +5,13 @@ using namespace std;
 
 // Function to reverse elements from index l to index r in the array
 void reverseRange(int l, int r, vector<int>& arr) {
-    while (l <= r) {
+    while (l <= r) 
+    {
         swap(arr[l], arr[r]);
         l++;
         r--;
     }
 }
-
 void leftRotate(vector<int>& arr, int k) 
 {
     int n = arr.size();
