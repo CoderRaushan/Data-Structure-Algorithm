@@ -1,20 +1,9 @@
 #include<bits/stdc++.h>
 using namespace std;
-
-int left(int i)
-{
-    return (2 * i + 1);
-}
-
-int right(int i)
-{
-    return (2 * i + 2);
-}
-
 void minHeapify(int arr[], int size, int i)
 {
-    int li = left(i);
-    int ri = right(i);
+    int li = (2 * i + 1);
+    int ri = (2 * i + 2);
     int smallest = i;
 
     if (li < size && arr[li] < arr[smallest]) smallest = li;
