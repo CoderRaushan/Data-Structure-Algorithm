@@ -67,7 +67,7 @@ public:
             smallest = ri;
 
         if (smallest != i)
-        {
+        {   
             swap(arr[i], arr[smallest]);
             minHeapify(smallest);
         }
