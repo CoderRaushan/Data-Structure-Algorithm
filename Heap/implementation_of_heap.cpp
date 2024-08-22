@@ -92,6 +92,9 @@ public:
 
     void DecreaseKey(int i, int value)
     {
+        //decreasekey matlab replace given value by given index in minheap 
+        // while doing this if minheap property gets distroyed then 
+        // swap that ith idx value with parent of ith idx untill arr[parent(i)] > arr[i] where i!=0
         if (value > arr[i])
         {
             cout << "New value is greater than current value\n";
