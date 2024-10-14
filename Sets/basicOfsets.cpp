@@ -41,7 +41,7 @@ if(s.find(target)!=s.end())// s.find(target)=>it finds ele in the set and if ele
 {            //set then it return s.end() which is iterator next to the last value in the set. 
   cout<<"ele exists"<<endl;
 }
-else
+else 
 {
     cout<<"Does not exists"<<endl;
 }
