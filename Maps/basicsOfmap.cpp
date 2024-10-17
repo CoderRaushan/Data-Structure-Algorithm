@@ -1,29 +1,53 @@
 #include<iostream>
+#include<unordered_map>
 using namespace std;
 //include map
 int main()
 {
     // see baiscs of pair
     // <int,int>
-    pair<int,int>p;
-    p.first=3;
-    p.second=4;
-    cout<<p.first<<" "<<p.second<<endl;
+    //Method 1 to deal with map
+    pair<string,int>p1;
+    p1.first="Raushan";
+    p1.second=104;
+    // cout<<p1.first<<" "<<p1.second<<endl;
     //<string,int>
-    pair<string,int>pr;
-    pr.first="age:";
-    pr.second=20;
-    cout<<pr.first<<" "<<pr.second<<endl;
+    pair<string,int>p2;
+    p2.first="Tejas";
+    p2.second=120;
+    // cout<<p2.first<<" "<<p2.second<<endl;
     //<char,int>
-    pair<char,int>prr;
-    prr.first='A';
-    prr.second=95;
-    cout<<prr.first<<" "<<prr.second<<endl;
+    pair<string,int>p3;
+    p3.first="Rahul";
+    p3.second=195;
+    // cout<<p3.first<<" "<<p3.second<<endl;
 
     // staring with map
+    unordered_map<string,int>m;
+    m.insert(p1);
+    m.insert(p2);
+    m.insert(p3);
 
-    // video : 45:25
+    // Method 2 to deal with map
 
+    m["vikash"]=643;
+    m["vikky"]=1035;
+    m["roshan"]=10465;
 
+    
+    for(auto p:m)
+    {
+        cout<<p.first<<" "<<p.second<<endl;
+    }
+    cout<<endl<<"size of map is:"<<m.size();
+
+   m.erase("vikky");
+   cout<<"\n after erase from map."<<endl;
+    for(auto p:m)
+    {
+        cout<<p.first<<" "<<p.second<<endl;
+    }
+    cout<<endl<<"size of map is:"<<m.size()<<endl;
+    cout<<m["Raushan"];
     return 0;
 }
