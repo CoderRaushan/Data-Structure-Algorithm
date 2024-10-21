@@ -1,4 +1,4 @@
-// }
+
     //  // METHOD 2
     //   bool isAnagram(string s, string t) 
     //   {
