@@ -19,7 +19,8 @@ public:
     // Function to count distinct integers in the vector, including their reversed forms
     int countDistinctIntegers(vector<int>& nums) {
         unordered_set<int> s;
-        for (int i = 0; i < nums.size(); i++) {
+        for (int i = 0; i < nums.size(); i++) 
+        {
             int ele = reverse(nums[i]);
             s.insert(nums[i]);
             s.insert(ele);

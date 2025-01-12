@@ -16,7 +16,6 @@ public:
         {
             string str = arr[i];
             reverse(str.begin(), str.end());
-            
             // If the reverse string is found in the set, we have a pair
             if (s.find(str) != s.end()) 
             {
