@@ -14,6 +14,15 @@ int main()
     s.insert(2);
     s.insert(3);
     s.insert(4);
+    /*
+        stl and methods in sets
+        insert(4);
+        find(4);
+        size();
+        begin();
+        end();
+        erase();
+    */
     // set me unique ele hi store hoti hai
     s.insert(1); // it will not store again in the set
     // output:5 1 2 3 4

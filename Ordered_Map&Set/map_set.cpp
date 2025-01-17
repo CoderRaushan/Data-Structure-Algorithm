@@ -1,5 +1,5 @@
 #include<iostream>
-#include<set>  //order
+#include<set>  //ordered
 #include<map>
 using namespace std;
 
@@ -30,5 +30,16 @@ int main()
     {
         cout<<val.first<<" "<<val.second<<endl;
     }
+
+     map<string,int>m1;
+     m1["Raushan"]=54;
+     m1["Reul"]=56;
+     m1["Rghan"]=58;
+     m1["Rbhul"]=60; // it will print it in lexographical order 
+     for(auto val:m1)
+     {
+        cout<<val.first<<" "<<val.second<<endl;
+    }
+    
     return 0;
 }
