@@ -4,6 +4,7 @@
 using namespace std;
 int main()
 {
+    //we wil do it later when all sorting algo is revised!
     // int arr[]={ 8,7, 1, 6, 5, 9};
     vector<int>v={ 4, 2, 8, 6, 15, 5, 9, 20};
     vector<int>result;
