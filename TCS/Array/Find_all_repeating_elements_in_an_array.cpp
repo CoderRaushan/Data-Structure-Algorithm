@@ -34,7 +34,7 @@ using namespace std;
 // }
 int main()
 {
-    vector<int>v={1,1,2,2,1,1,4,5,6,6,7,9,1,2,3,4,4,5,2,8,8};//1 2 4 5 6 8
+    vector<int>v={1,1,2,2,1,1,4,5,6,6,7,9,1,2,3,4,4,5,2,8,8};//1 2 4 5 6 8 
     sort(v.begin(),v.end());//sort  Tc=O(nlogn) for sorting
     int n=v.size();
     vector<int>res;

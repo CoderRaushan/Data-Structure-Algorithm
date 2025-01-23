@@ -26,8 +26,8 @@
 #include<bits/stdc++.h>
 #include<unordered_set>
 using namespace std;
-
-int main() {
+int main() 
+{
     vector<int> nums = {1,2,-1,1,3,1,7,-4,-5,-4};
     cout<<"Non-repeating numbers are: "<<endl;
     unordered_set<int>s;
