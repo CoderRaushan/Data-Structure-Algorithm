@@ -9,7 +9,7 @@ int main()
     vector<int> res(arr);//sc=O(n) tc=O{n}
     sort(res.begin(),res.end());//tc=O(nlogn)
     int n = arr.size();
-    unordered_map<int, int>m;//sc=O(n)
+    unordered_map<int,int>m;//sc=O(n)
     int idx=1;
     for(auto it:res)//tc=O(n)
     {
