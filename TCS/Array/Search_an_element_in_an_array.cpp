@@ -12,10 +12,10 @@ int LinearSearch(vector<int>&v,int k)
         }
     }
     return -1;
-}
+}//Time  com=O(n)
 int BinarySearch(vector<int>&v,int low,int high,int k)
 {
-    int mid= low + (high - low) / 2;
+    int mid = low + (high - low) / 2;
     if(low>high) return -1;
     if(v[mid]==k) return mid;
     if(v[mid]>k)
@@ -24,9 +24,9 @@ int BinarySearch(vector<int>&v,int low,int high,int k)
     }
     else 
     {
-       return  BinarySearch(v,mid+1,high,k);
+       return BinarySearch(v,mid+1,high,k);
     }
-}
+}//Time com=O(logn)
 int main()
 {
     vector<int>v={6,7,9,11,43,56,99};
