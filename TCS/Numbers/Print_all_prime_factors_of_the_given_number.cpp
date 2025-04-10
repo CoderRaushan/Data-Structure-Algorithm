@@ -3,29 +3,36 @@
 using namespace std;
 bool ISPrime(int n)
 {
-
-}
-void Divisor(int n)
-{
-    for (int i = 1; i <= sqrt(n); i++)
+    if (n <= 1)
+        return false;
+    bool isPrime = true;
+    for (int i = 2; i <= sqrt(n); i++)
     {
         if (n % i == 0)
         {
-            // If divisors are equal, print only one
-            if (n / i == i)
+            isPrime = false;
+            return isPrime;
+        }
+    }
+    return isPrime;
+}
+void Divisor(int n)
+{
+    for (int i = 1; i <=n; i++)
+    {
+        if (n % i == 0)
+        {
+
+            if (ISPrime(i))
             {
-                ISPrime
-            }
-            else // Otherwise print both
-            {
-                cout << " " << i << " " << n / i;
+                cout << i << " ";
             }
         }
     }
 }
 int main()
 {
-    int n = 60;
+    int n = 780;
     cout << "Factors of " << n << " are: ";
     Divisor(n);
     return 0;
