@@ -19,10 +19,6 @@ form right side
 */
 int powefunction(int a,int b)
 {
-    if(b<0)
-    {
-        return 0;
-    }
     if(b==0)
     {
         return 1;
@@ -53,9 +49,18 @@ n%
 */
 void createBunch(string s)
 {
+    if((s.length()%3)==2)
+    {
+        s="0"+s;
+    }
+    if((s.length()%3)==1)
+    {
+        s="00"+s;
+    }
     int n=s.length()-1;
     int i=0;
     int data=0;
+    
     while(i<n)
     {
         data=data*10+ConvertBinarytoDecimail(s.substr(i,3));
@@ -65,10 +70,7 @@ void createBunch(string s)
 }
 int main()
 {
-    // cout<<BinaryToOctal(100100);
-    createBunch("011111");
-    // string s="100110101";
-    // cout<<s.length();
-    
+    createBunch("1100110");
     return 0;
 }
+
