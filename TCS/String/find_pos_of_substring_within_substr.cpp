@@ -2,24 +2,21 @@
 using namespace std;
 int main()
 {
-
-    string str2 = "hello";
-    string str1 = "az";
-    int idx=0;
-    for(int i=0;i<str2.length();i++)
+    string str1 = "hello";
+    string str2 = "az";
+    int idx = 0;
+    char match = str1[0];
+    for (int j = 0; j < str2.length(); j++)
     {
-        for(int j=0;j<str1.length();j++)
+        if (str2[j] == match)
         {
-            if(str2[i]==str1[j])
-            {
-                idx=j;
-                break;
-            }
+            idx = j;
+            break;
         }
-        if(idx!=0)break;
     }
-    if(idx==0)idx=-1;
-    cout<<idx;
+    if (idx == 0)
+        idx = -1;
+    cout << idx;
 
     return 0;
 }
