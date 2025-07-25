@@ -37,9 +37,18 @@ int main()
     {
         k = k % n;
     }
+    //right rotated 
     reversepart(0, n - 1 - k, v1); // left part first
     reversepart(n - k, n - 1, v1); // right part second
     reversepart(0, n - 1, v1);     // all array ko swap kro
+    
+    //left rotated
+    reversepart(0, k-1, v1); // left part first
+    reversepart(k, n - 1, v1); // right part second
+    reversepart(0, n - 1, v1);     // all array ko swap kro
+
+
+
     display(v1);
     return 0;
 }

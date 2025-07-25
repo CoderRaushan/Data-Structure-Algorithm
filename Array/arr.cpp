@@ -6,7 +6,7 @@ int main()
     int *ptr = &arr[0];
     cout << ptr << endl;
     ptr[0] = 8;
-    for (int i = 0; i < 5; i++)
+    for (int i = 0; i < 6; i++)
     {
         cout << ptr[i] << " ";
     }
