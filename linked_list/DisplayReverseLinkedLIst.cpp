@@ -17,24 +17,28 @@ public:
         this->next = next;
     }
 };
+void display(Node *temp)
+{
+    while (temp != NULL)
+    {
+        cout << temp->val << "->";
+        temp = temp->next;
+    }
+    cout << "NULL";
+}
 Node* ReverseLinkedList(Node *head)
 {
     Node* curr=head;
-    Node* nextNode=head->next->next;
-    int cnt=0;
-    while (nextNode != NULL)
+    Node* prev=NULL;
+    while(curr!=NULL)
     {
-        nextNode->next=curr;
-        if(cnt==0)
-        {
-            curr->next=NULL;
-        }
-        cnt++;
-        curr=curr->next;
-        nextNode=nextNode->next;
+        Node* temp=curr->next;
+        curr->next=prev;
+        prev=curr;
+        curr=temp;
     }
-    return nextNode;
-}
+    return prev;
+};
 int main()
 {
     // creating node
@@ -50,6 +54,10 @@ int main()
     c->next = d;
     d->next = e;
     e->next = f;
-    cout<<ReverseLinkedList(head)->val;
+    cout<<"Before reverse"<<endl;
+    display(head);
+    cout<<endl;
+    cout<<"After reverse"<<endl;
+    display(ReverseLinkedList(head));
     return 0;
-}
+}   
