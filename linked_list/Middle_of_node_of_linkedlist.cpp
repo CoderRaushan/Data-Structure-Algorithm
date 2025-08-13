@@ -39,6 +39,17 @@ Node* MiddleOfLinkedListForEven(Node *temp)
     }
     return slow;    
 }
+Node* MiddleOfLinkedListForEvenAndOddForBoth(Node *temp)
+{
+    Node* slow=temp;
+    Node* fast=temp;
+    while (fast && fast->next)
+    { 
+        slow=slow->next;
+        fast=fast->next->next;
+    }
+    return slow;    
+}
 int main()
 {
     // creating node
@@ -56,6 +67,8 @@ int main()
     e->next = f;
     // cout<<MiddleOfLinkedListForOdd(head)->val;
     cout<<endl;
-    cout<<MiddleOfLinkedListForEven(head)->val;
+    // cout<<MiddleOfLinkedListForEven(head)->val;
+    cout<<endl;
+    cout<<MiddleOfLinkedListForEvenAndOddForBoth(head)->val;
     return 0;
 }
