@@ -1,6 +1,6 @@
 #include <bits/stdc++.h>
 using namespace std;
-// using only recursion  not optimaized till yet
+// using only recursion not optimaized till yet
 int f(int n)
 {
     if (n <= 1)
@@ -13,7 +13,7 @@ int main()
     cout << f(n);
     return 0;
 }
-// TC=2^n and SC=2^n
+// TC=2^n and SC=2^n system stack call 
 // now using dp in optimized way
 
 
@@ -31,4 +31,4 @@ int main()
     cout << f(n,dp);
     return 0;
 }
-// TC=O(n) and SC=o(n)+O(n)
+// TC=O(n) and SC=o(n) + for system stack call O(n)
